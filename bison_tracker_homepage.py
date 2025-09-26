@@ -10,11 +10,6 @@ def homepage():
         with ui.row().classes("justify-center items-center"):
             ui.image("/assets/bison_logo.png").classes("w-10 h-10")
             ui.label("Bison Tracker").classes("text-lg font-bold")
-        # with ui.row():
-        #     ui.link("Dashboard").classes("no-underline text-white")
-        #     ui.link("Settings").classes("no-underline text-white")
-        #     ui.link("Help").classes("no-underline text-white")
-        #     # ui.image("/assets/")
     ui.query('.nicegui-content').classes('m-0 p-0 gap-0')
     with ui.element("div").classes("w-full h-screen overflow-hidden items-center"):
         with ui.element("div").classes("w-full h-full relative bg-[url('/assets/bison_hero_image.png')] bg-center bg-cover md:px-20 md:py-20 items-center justify-center flex"):
