@@ -35,17 +35,13 @@ pip install nicegui httpx
 - git clone https://github.com/yourusername/BisonTracker.git
 - cd main.py
 
-## Update live server url
+## 
 # Default URL in BisonTracker.py
 - LIVE_SERVER_URL = "http://127.0.0.1:8080/stats"
 
 ##Adjust frontend port 
 - ui.run(title='Bison Tracker', dark=False, port=8081, favicon='🦌')
 
-## Running 
+## Running the Application
 
-API Endpoint
-
-The dashboard expects a live detection server that exposes an HTTP endpoint returning JSON data:
-
-GET /stats
+To start the BisonTracker dashboard, simply run the `main.py` file:

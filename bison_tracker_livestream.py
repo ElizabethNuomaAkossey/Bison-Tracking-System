@@ -4,6 +4,10 @@ import random
 import time
 from typing import Dict, Any
 from datetime import datetime
+import json
+import cv2
+
+
 
 # Exposing assets folder
 app.add_static_files("/assets","assets")
@@ -30,14 +34,15 @@ def livestream():
                     ui.button('Chart Options', icon='tune').props('flat no-caps').classes("bg-green-200 rounded-lg hover:bg-green-400 text-black dark:text-white font-bold")
                     ui.button('Export', icon='download').props('flat no-caps').classes("bg-green-200 rounded-lg hover:bg-green-300 text-black dark:text-white font-bold")
         
-            with ui.row().classes("w-full h-full md:gap-8 flex flex-wrap"):  # Main row
+            with ui.row().classes("w-full md:h-full md:gap-8 flex flex-wrap"):  # Main row
                 # Left: Video
                 with ui.card().classes("video-placeholder shadow-lg w-full lg:w-[60%] "):
-                    ui.html('''
+                    ui.html(f'''
                         <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center ">
                             <div class="play-button">
+                                <video src="Bison-tracked_new.mp4>
                                 <svg width="48" height="48" fill="white" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
+                                    <path d=video/>
                                 </svg>
                             </div>
                         </div>
@@ -60,7 +65,7 @@ def livestream():
                         ui.label("Bison Movement").classes('text-lg')
 
             with ui.element("div").classes('grid grid-cols-2 lg:grid-cols-6 gap-4 w-full'):
-                ui.label("Live Data").classes('text-2xl font-bold text-gray-900 dark:text-white')
+                # ui.label("Live Data").classes('text-2xl font-bold text-gray-900 dark:text-white')
                     # Frame card
                 with ui.card().classes('bg-green-200 p-4'):
                         ui.label('Frame').classes('text-sm font-medium text-gray-600 dark:text-gray-300')
@@ -162,4 +167,3 @@ def livestream():
 
                 
 
-ui.run()
