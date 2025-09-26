@@ -4,6 +4,6 @@ from bison_tracker_dashboard import *
 from app import *
 
 
-ui.run()
+ui.run(port=8000)
 
 
